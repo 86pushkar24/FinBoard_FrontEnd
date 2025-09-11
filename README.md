@@ -1,6 +1,6 @@
 # Financial Data Dashboard
 
-![FinBoard Dashboard Screenshot](./public/Screenshot%202025-09-11%20224726.png)
+![FinBoard Dashboard Screenshot](./public/Sample.png)
 
 A modern, customizable financial data dashboard built with Next.js that allows you to create and manage widgets displaying real-time financial data from various APIs including Finnhub, Coinbase, and custom endpoints.
 
