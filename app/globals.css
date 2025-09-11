@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+/* Light theme variables */
+:root.light {
+  --background: #ffffff;
+  --foreground: #171717;
+  --card-bg: #f8fafc;
+  --border-color: #e2e8f0;
+  --text-muted: #64748b;
+}
+
+/* Dark theme variables (default) */
+:root,
+:root.dark {
+  --background: #0f172a;
+  --foreground: #ededed;
+  --card-bg: #1e293b;
+  --border-color: #334155;
+  --text-muted: #94a3b8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Custom scrollbar styling - Dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #374151;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Firefox scrollbar - Dark mode */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6b7280 #374151;
+}
+
+/* Light mode scrollbar overrides */
+:root.light ::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+
+:root.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+:root.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+:root.light * {
+  scrollbar-color: #cbd5e1 #e2e8f0;
+}
+
+/* Theme-aware component classes */
+.theme-card {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+.theme-text-muted {
+  color: var(--text-muted);
+}
+
+/* Light theme overrides for existing components */
+:root.light .bg-slate-900 {
+  background-color: #f1f5f9 !important;
+}
+
+:root.light .bg-slate-800 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+:root.light .bg-slate-700 {
+  background-color: #f8fafc !important;
+}
+
+:root.light .bg-slate-950 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+:root.light .text-white {
+  color: #1e293b !important;
+}
+
+:root.light .text-gray-400 {
+  color: #64748b !important;
+}
+
+:root.light .text-gray-500 {
+  color: #64748b !important;
+}
+
+:root.light .border-slate-700 {
+  border-color: #e2e8f0 !important;
+}
+
+:root.light .border-slate-600 {
+  border-color: #cbd5e1 !important;
+}
