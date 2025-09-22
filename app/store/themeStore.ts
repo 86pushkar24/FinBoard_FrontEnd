@@ -9,7 +9,6 @@
  * - Persistent theme storage with localStorage
  * - Cross-tab synchronization for consistent theming
  * - DOM class manipulation for Tailwind CSS theme support
- * - Hydration-safe theme application
  */
 
 import { create } from "zustand";
@@ -33,6 +32,7 @@ interface ThemeStore {
  *
  * Uses Zustand with persistence middleware to maintain theme preferences
  * across browser sessions and page refreshes.
+ * 
  */
 export const useThemeStore = create<ThemeStore>()(
   persist(
