@@ -117,7 +117,7 @@ export const useWidgetStore = create<WidgetStore>()(
           return { widgets }
         })
       },
-      
+      // simple modal state management - so context remains clean
       openAddModal: () => set({ isAddModalOpen: true }),
       closeAddModal: () => set({ isAddModalOpen: false }),
       
