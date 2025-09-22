@@ -73,7 +73,7 @@ export default function Navbar() {
    * Validates file format and provides user feedback on success/failure.
    *
    * @param event - File input change event
-   */
+   **/
   const handleImport = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
